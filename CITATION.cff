@@ -2,8 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: MIST
-message: Medical Image Streaming Toolkit (MIST) by UM2ii
+title: Medical Image Streaming Toolkit (MIST)
 type: software
 authors:
   - given-names: Pranav
