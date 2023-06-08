@@ -1,2 +1,1 @@
-# MIST
-Medical Image Streaming Toolkit
+# Medical Image Streaming Toolkit (MIST)
