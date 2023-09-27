@@ -1,6 +1,4 @@
 # Medical Image Streaming Toolkit (MIST)
-
-<<<<<<< HEAD
 **Note:** This repository is currently a work in progress. Please contact us for more details [here](mailto:pkulkarni@som.umaryland.edu,vparekh@som.umaryland.edu).
 
 ### Announcements
@@ -17,8 +15,3 @@ The Medical Image Streaming Toolkit (MIST), an open-source framework that operat
 In our [preprint](https://arxiv.org/pdf/2307.00438.pdf), we demonstrate that MIST can dramatically reduce medical image data infrastructure requirements for hosting and streaming datasets while maintaining diagnostic image quality and information for deep learning analyses and applications.
 
 ![test](./assets/example.jpg)
-=======
-This repository provides an open-source implementation of MIST. Source code to recreate the experimental design from our paper is available [here](https://github.com/UM2ii/MIST_Paper).
-
-**Note:** This repository is currently a work in progress. Please contact us for more details [here](mailto:pkulkarni@som.umaryland.edu,vparekh@som.umaryland.edu).
->>>>>>> 08902edf52a4f4fd82981ec0b1c13d1343c26f6d
