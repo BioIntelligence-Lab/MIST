@@ -1,17 +1,11 @@
-# Medical Image Streaming Toolkit (MIST)
-**Note:** This repository is currently a work in progress. Please contact us for more details [here](mailto:pkulkarni@som.umaryland.edu,vparekh@som.umaryland.edu).
+**Note:** This repository is currently work in progress.
+___
 
-### Announcements
+[![arXiv](https://img.shields.io/badge/arXiv-2305.15617-b31b1b.svg)](https://arxiv.org/abs/2307.00438) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- **[17 July 2023]** - OpenJPHpy our toolkit for encoding and/or decoding High-Throughput JPEG 2000 (HTJ2K) images directly through Python is now available [here](https://github.com/UM2ii/openjphpy).
-- **[1 July 2023]** - Our preprint on MIST is available on arXiv [here](https://arxiv.org/pdf/2307.00438.pdf).
+# Towards Resource-Efficient Streaming of Large-Scale Medical Image Datasets for Deep Learning
+### Pranav Kulkarni, Adway Kanhere, Eliot L. Siegel, Paul H. Yi, Vishwa S. Parekh
 
-## About
+![concept figure](./assets/overview.png)
 
-The Medical Image Streaming Toolkit (MIST), an open-source framework that operationalizes progressive resolution for medical imaging data by progressively encoding and streaming medical imaging datasets. MIST is built on the scientific premise that progressive resolution can:
-- Dramatically reduce medical image data infrastructure costs by reducing storage and data transfer bandwidth requirements
-- Improve image data useability by making it more practical for users to download this data, even with low storage or slow internet connections. 
-
-In our [preprint](https://arxiv.org/pdf/2307.00438.pdf), we demonstrate that MIST can dramatically reduce medical image data infrastructure requirements for hosting and streaming datasets while maintaining diagnostic image quality and information for deep learning analyses and applications.
-
-![test](./assets/example.jpg)
+Large-scale medical imaging datasets have accelerated deep learning (DL) for medical image analysis. However, the large scale of these datasets poses a challenge for researchers, resulting in increased storage and bandwidth requirements for hosting and accessing them. Since different researchers have different use cases and require different resolutions or formats for DL, it is neither feasible to anticipate every researcher's needs nor practical to store data in multiple resolutions and formats. To that end, we propose the Medical Image Streaming Toolkit (MIST), a format-agnostic database that enables streaming of medical images at different resolutions and formats from a single high-resolution copy. We evaluated MIST across eight popular, large-scale medical imaging datasets spanning different body parts, modalities, and formats. Our results showed that our framework reduced the storage and bandwidth requirements for hosting and downloading datasets without impacting image quality. We demonstrate that MIST addresses the challenges posed by large-scale medical imaging datasets by building a data-efficient and format-agnostic database to meet the diverse needs of researchers and reduce barriers to DL research in medical imaging.
