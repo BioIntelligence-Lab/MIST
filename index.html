@@ -93,41 +93,40 @@
     <h1>MIST: Medical Image Streaming Toolkit</h1>
     <p class="subtitle">A unified framework for intelligent, progressive, and resource-efficient medical image streaming.</p>
     <div class="btn-container">
-      <a href="https://doi.org/10.1007/s10278-024-01173-z" class="btn">Journal Paper (JDI 2024)</a>
+      <a href="https://doi.org/10.1007/s10278-024-01173-z" class="btn">Journal Paper (JIIM 2024)</a>
       <a href="https://openreview.net/forum?id=IIuULGCHLY&noteId=IIuULGCHLY" class="btn">Conference Paper (MIDL 2025)</a>
       <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2024233969" class="btn">Patent</a>
       <a href="https://github.com/BioIntelligence-Lab/MIST" class="btn">GitHub</a>
     </div>
   </header>
 
-  <section id="overview">
-    <h2>Overview</h2>
-    <p><strong>MIST</strong> introduces a format-agnostic, open-source framework for progressive streaming of medical imaging data. By transmitting only the optimal sub-resolution needed for AI inference or visualization, MIST enables dramatic reductions in bandwidth, storage, and compute requirements while preserving diagnostic fidelity.</p>
-    <div class="highlight">
-      <ul>
-        <li>Progressive multi-resolution streaming using HTJ2K</li>
-        <li>AI-aware stream optimization </li>
-        <li>Standardized Python interface (OpenJPHpy)</li>
-        <li>Compatibility with DICOM, NIfTI, and standard image formats</li>
-      </ul>
-    </div>
-  </section>
+<section id="overview">
+<h2>Overview</h2>
+<h3>MIST: Medical Imaging Streaming Toolkit</h3>
+<ul class="highlights">
+<li><strong>Challenge:</strong> Large-scale imaging datasets require significant storage and bandwidth, limiting accessibility for AI research and clinical deployment.</li>
+<li><strong>MIST Solution:</strong> A format-agnostic database enabling streaming of medical images at multiple resolutions and formats from a single high-resolution copy.</li>
+<li><strong>Evaluation:</strong> Tested across eight diverse datasets (CT, MRI, X-ray) covering multiple modalities and file formats.</li>
+<li><strong>Results:</strong> Reduced storage and bandwidth requirements without impacting image quality or downstream deep learning performance.</li>
+<li><strong>Impact:</strong> Creates a data-efficient, format-agnostic platform that reduces barriers to AI research in medical imaging.</li>
+</ul>
+
+
+<h3>ISLE: Intelligent Streaming for AI Inference</h3>
+<ul class="highlights">
+<li><strong>Motivation:</strong> Growing adoption of AI systems in radiology is increasing demands for bandwidth and computational resources.</li>
+<li><strong>ISLE Framework:</strong> An intelligent streaming method inspired by video-on-demand platforms to deliver only the resolution needed for AI inference using progressive encoding.</li>
+<li><strong>Results (Classification):</strong> Reduced transmission by ≥90% and decoding time by ≥87%</li>
+<li><strong>Results (Segmentation):</strong> Reduced transmission by ≥77% and decoding time by ≥89%</li>
+<li><strong>Performance:</strong> No impact on diagnostic performance (all P > 0.05).</li>
+<li><strong>Impact:</strong> Improves data and computational efficiency for AI deployment in clinical environments without compromising diagnostic accuracy.</li>
+</ul>
+</section>
 
   <section id="architecture">
     <h2>Architecture</h2>
     <p class="center">A schematic representation of MIST's hierarchical and adaptive streaming pipeline.</p>
     <img src="https://raw.githubusercontent.com/BioIntelligence-Lab/MIST/main/assets/overview.png" alt="MIST Architecture Overview" class="diagram">
-  </section>
-
-  <section id="results">
-    <h2>Results Summary</h2>
-    <table>
-      <tr><th>Evaluation Domain</th><th>Improvement</th><th>Description</th></tr>
-      <tr><td>Classification Bandwidth</td><td>↓ 91.58%</td><td>Only transmits optimal resolutions required for inference</td></tr>
-      <tr><td>Segmentation Bandwidth</td><td>↓ 77.93%</td><td>Only transmits optimal resolutions required for segmentation</td></tr>
-      <tr><td>Storage</td><td>↓  49.79 ± 23.27% </td><td>Progressive encoding reduces redundancy</td></tr>
-      <tr><td>Diagnostic Fidelity</td><td>No significant impact on model performance</td></tr>
-    </table>
   </section>
 
   <section id="opensource">
