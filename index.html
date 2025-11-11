@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIST: Medical Image Streaming Toolkit</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      margin: 0;
+      background: #fff;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: #f8f9fb;
+    }
+    h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 80px;
+    }
+    p.subtitle {
+      font-size: 1.3em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .btn-container {
+      margin-top: 25px;
+    }
+    .btn {
+      display: inline-block;
+      background: #0055cc;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #003f99; }
+    section {
+      width: 85%;
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      padding: 10px;
+    }
+    footer {
+      text-align: center;
+      background: #f1f3f6;
+      padding: 40px 0;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 60px;
+    }
+    .highlight {
+      background: #e9f2ff;
+      padding: 20px;
+      border-left: 4px solid #0055cc;
+      margin: 25px 0;
+      border-radius: 6px;
+    }
+    .center { text-align: center; }
+    img.diagram {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MIST: Medical Image Streaming Toolkit</h1>
+    <p class="subtitle">A unified framework for intelligent, progressive, and resource-efficient medical image streaming.</p>
+    <div class="btn-container">
+      <a href="https://doi.org/10.1007/s10278-024-01173-z" class="btn">Journal Paper (JDI 2024)</a>
+      <a href="https://openreview.net/forum?id=IIuULGCHLY&noteId=IIuULGCHLY" class="btn">Conference Paper (MIDL 2025)</a>
+      <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2024233969" class="btn">Patent</a>
+      <a href="https://github.com/BioIntelligence-Lab/MIST" class="btn">GitHub</a>
+    </div>
+  </header>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p><strong>MIST</strong> introduces a format-agnostic, open-source framework for progressive streaming of medical imaging data. By transmitting only the optimal sub-resolution needed for AI inference or visualization, MIST enables dramatic reductions in bandwidth, storage, and compute requirements while preserving diagnostic fidelity.</p>
+    <div class="highlight">
+      <ul>
+        <li>Progressive multi-resolution streaming using HTJ2K</li>
+        <li>AI-aware stream optimization </li>
+        <li>Standardized Python interface (OpenJPHpy)</li>
+        <li>Compatibility with DICOM, NIfTI, and standard image formats</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <h2>Architecture</h2>
+    <p class="center">A schematic representation of MIST's hierarchical and adaptive streaming pipeline.</p>
+    <img src="https://github.com/BioIntelligence-Lab/MIST/blob/main/assets/overview.png" alt="MIST Architecture Overview" class="diagram">
+  </section>
+
+  <section id="results">
+    <h2>Results Summary</h2>
+    <table>
+      <tr><th>Evaluation Domain</th><th>Improvement</th><th>Description</th></tr>
+      <tr><td>Classification Bandwidth</td><td>↓ 91.58%</td><td>Only transmits optimal resolutions required for inference</td></tr>
+      <tr><td>Segmentation Bandwidth</td><td>↓ 77.93%</td><td>Only transmits optimal resolutions required for segmentation</td></tr>
+      <tr><td>Storage</td><td>↓  49.79 ± 23.27% </td><td>Progressive encoding reduces redundancy</td></tr>
+      <tr><td>Diagnostic Fidelity</td><td>No significant impact on model performance</td></tr>
+    </table>
+  </section>
+
+  <section id="opensource">
+    <h2>Open-Source Tools</h2>
+    <table>
+      <tr><th>Component</th><th>Description</th><th>Repository</th></tr>
+      <tr><td>MIST</td><td>Core streaming and dataset management framework</td><td><a href="https://github.com/BioIntelligence-Lab/MIST">GitHub</a></td></tr>
+      <tr><td>IntelligentStreaming</td><td>AI-aware streaming for real-time inference</td><td><a href="https://github.com/BioIntelligence-Lab/IntelligentStreaming">GitHub</a></td></tr>
+      <tr><td>OpenJPHpy</td><td>Python interface for HTJ2K codec</td><td><a href="https://github.com/BioIntelligence-Lab/openjphpy">GitHub</a></td></tr>
+    </table>
+  </section>
+
+  <section id="patent">
+    <h2>Patents</h2>
+    <p><strong>Patent:</strong> WO2024233969A1 — <em>System and Method for Hierarchical Intelligent Streaming of Medical Image Data for AI and Clinical Workflows</em></p>
+    <p><strong>Filed by:</strong> University of Maryland Baltimore <br>
+       <strong>Inventors:</strong> Vishwa S. Parekh, Pranav Kulkarni, Adway Kanhere, Eliot L. Siegel, Paul H. Yi</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Kulkarni P., Kanhere A., Siegel E.L., Yi P.H., Parekh V.S. <em>ISLE: An Intelligent Streaming Framework for High-Throughput AI Inference in Medical Imaging.</em> <strong>Journal of Imaging Informatics in Medicine. 2024 Dec;37(6):3250-63. <a href="https://doi.org/10.1007/s10278-024-01173-z">DOI</a></p>
+    <p>Kulkarni P., Kanhere A., Siegel E., Yi P., Parekh V.S. <em>Towards Resource-Efficient Streaming of Large-Scale Medical Image Datasets for Deep Learning.</em> <strong>Medical Imaging with Deep Learning (MIDL)</strong> (2025). <a href="https://openreview.net/forum?id=IIuULGCHLY&noteId=IIuULGCHLY">OpenReview</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="center"><strong>Dr. Vishwa S. Parekh</strong><br>
+    UTHealth Houston<br>
+    <a href="mailto:vishwa.s.parekh@uth.tmc.edu">vishwa.s.parekh@uth.tmc.edu</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 BioIntelligence Research Lab · UTHealth Houston</p>
+  </footer>
+</body>
+</html>
